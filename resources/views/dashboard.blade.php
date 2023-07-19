@@ -33,7 +33,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 @foreach($presentations as $presentation)
                     <div>{{$presentation->title}} <a href="presentations/{{$presentation->id}}">View </a>
-                    <p>{{$presentation->content}}</p>
                 @endforeach
             </div>
         </div>

@@ -23,13 +23,13 @@ class PresentationController extends Controller
 
         SendPrompt::dispatch($presentation);
 
-
+        return redirect()->route('dashboard');
 
     }
 
     public function show($id)
     {
-        return view('presentation.show',[
+        return view('presentation',[
            'presentation'  => Presentation::find($id)
         ]);
     }

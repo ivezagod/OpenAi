@@ -33,7 +33,7 @@ class SendPrompt implements ShouldQueue
     {
         $client = OpenAI::client(env('OPEN_API_KEY'));
         $description = $this->presentation->description;
-        $prompt = "Generate me a text for markdown reveal.js presentation with all the styling in it and without pictures on topic:{{$description}}";
+        $prompt = "Generate me a text for markdown reveal.js presentation with all the styling in it and without pictures on topic:{{$description}}. Make 10 slides. Put --- as separator between slides.";
         $result = $client->chat()->create([
             'model' => 'gpt-3.5-turbo',
             'messages' => [
